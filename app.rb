@@ -12,8 +12,12 @@ class App < Sinatra::Base
       haml "#{directories.join("/")}_#{file}".to_sym, { :layout => false }, variables
     end
   end
-
+  
   get '/' do
-    markdown :index, :layout_engine => :haml
+    haml :index
+  end
+
+  get '/documentation' do
+    markdown :documentation, :layout_engine => :haml
   end
 end
