@@ -5,24 +5,113 @@
 +blueprint
 
 html body
+  background: image-url("bg.png")
+  color: #444
+  font-family: "helvetica neue", helvetica, arial, sans-serif
+  
   padding: 4em 0
 
 .container
   width: +span(20)
+
+.illustration
+  background: image-url("netsuke.png")
+  width: 358px
+  height: 358px
+  margin: 30px auto
+  margin-bottom: 60px
+
+hgroup
+  text-align: center
+  margin-bottom: 60px
+
+  h1
+    font-size: 6em
+    font-weight: bold
+    color: #262626
+    margin-bottom: 0.25em
+
+  h2
+    color: #777
+
+.errata
+  text-align: center
+  text-transform: lowercase
+  font-style: italic
+  display: none
+  margin: 30px auto
+
+button
+  background-color: #669BC6
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #52a8e8), color-stop(100%, #377ad0))
+  background-image: -webkit-linear-gradient(top, #52a8e8, #4086C2)
+  background-image: -moz-linear-gradient(top, #52a8e8, #4086C2)
+  background-image: -ms-linear-gradient(top, #52a8e8, #4086C2)
+  background-image: -o-linear-gradient(top, #52a8e8, #4086C2)
+  background-image: linear-gradient(top, #52a8e8, #4086C2)
+  border-top: 1px solid #4081af
+  border-right: 1px solid #2e69a3
+  border-bottom: 1px solid #20559a
+  border-left: 1px solid #2e69a3
+  -webkit-border-radius: 16px
+  -moz-border-radius: 16px
+  border-radius: 16px
+  -webkit-box-shadow: inset 0 1px 0 0 #72b9eb, 0 1px 2px 0 #b3b3b3
+  -moz-box-shadow: inset 0 1px 0 0 #72b9eb, 0 1px 2px 0 #b3b3b3
+  box-shadow: inset 0 1px 0 0 #72b9eb, 0 1px 2px 0 #b3b3b3
+  color: #fff
+  font-size: 1.25em
+  line-height: 1
+  padding: 7px 10px
+  text-align: center
+  text-shadow: 0 -1px 1px #3275bc
+  width: 312px
+  margin: 40px auto
+  display: block
+  -webkit-background-clip: padding-box
+  &:hover
+    background-color: #3e9ee5
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e9ee5), color-stop(100%, #206bcb))
+    background-image: -webkit-linear-gradient(top, #3e9ee5 0%, #3E95D1 100%)
+    background-image: -moz-linear-gradient(top, #3e9ee5 0%, #3E95D1 100%)
+    background-image: -ms-linear-gradient(top, #3e9ee5 0%, #3E95D1 100%)
+    background-image: -o-linear-gradient(top, #3e9ee5 0%, #3E95D1 100%)
+    background-image: linear-gradient(top, #3e9ee5 0%, #3E95D1 100%)
+    border-top: 1px solid #2a73a6
+    border-right: 1px solid #165899
+    border-bottom: 1px solid #07428f
+    border-left: 1px solid #165899
+    -webkit-box-shadow: inset 0 1px 0 0 #62b1e9
+    -moz-box-shadow: inset 0 1px 0 0 #62b1e9
+    box-shadow: inset 0 1px 0 0 #62b1e9
+    cursor: pointer
+    text-shadow: 0 -1px 1px #1d62ab
+    -webkit-background-clip: padding-box
+  &:active
+    background: #4496E1
+    border: 1px solid #154c8c
+    border-bottom: 1px solid #0e408e
+    -webkit-box-shadow: inset 0 0 6px 3px #2C73B9, 0 1px 0 0 white
+    -moz-box-shadow: inset 0 0 6px 3px #2C73B9, 0 1px 0 0 white
+    box-shadow: inset 0 0 6px 3px #2C73B9, 0 1px 0 0 white
+    text-shadow: 0 -1px 1px #2361A4
+    -webkit-background-clip: padding-box
+
+  
 
 header
   font-size: 150%
   border-bottom: 2px #ccc solid
   margin-bottom: 2em
   text-align: center
-  
+
 article
   width: +span(16)
   margin: 0 auto
-  
-  h1
-    font-size: 2.5em
-  
-  h3
-    border-bottom: 1px #ccc solid
-    padding-bottom: 0.5em
+
+h1
+  font-size: 2.5em
+
+h3
+  border-bottom: 1px #ccc solid
+  padding-bottom: 0.5em
