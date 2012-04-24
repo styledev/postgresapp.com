@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'haml'
 require 'json'
+require 'redcarpet'
 
 STDOUT.sync = true
 
@@ -13,6 +14,6 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    haml :index
+    markdown :index, :layout_engine => :haml
   end
 end
