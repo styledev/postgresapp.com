@@ -6,6 +6,9 @@
     %link{:rel => "stylesheet", :href => "/css/screen.css", :type => 'text/css', :media => "screen", :charset => "utf-8"}
 
   %body
-
     %div.container{:role => :main}
-      = yield
+      %header
+        %h1 Postgres.app
+        
+      %article
+        = yield

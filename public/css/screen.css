@@ -1245,3 +1245,36 @@ textarea {
   width: 390px;
   height: 250px;
 }
+
+/* line 7, ../sass/screen.sass */
+html body {
+  padding: 4em 0;
+}
+
+/* line 10, ../sass/screen.sass */
+.container {
+  width: 790px;
+}
+
+/* line 13, ../sass/screen.sass */
+header {
+  font-size: 150%;
+  border-bottom: 2px #cccccc solid;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+/* line 19, ../sass/screen.sass */
+article {
+  width: 630px;
+  margin: 0 auto;
+}
+/* line 23, ../sass/screen.sass */
+article h1 {
+  font-size: 2.5em;
+}
+/* line 26, ../sass/screen.sass */
+article h3 {
+  border-bottom: 1px #cccccc solid;
+  padding-bottom: 0.5em;
+}
