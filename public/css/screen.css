@@ -1251,7 +1251,7 @@ html body {
   background: url('/images/bg.png?1335290168');
   color: #444444;
   font-family: "helvetica neue", helvetica, arial, sans-serif;
-  padding: 4em 0;
+  padding: 2em 0;
 }
 
 /* line 14, ../sass/screen.sass */
@@ -1264,14 +1264,14 @@ html body {
   background: url('/images/netsuke.png?1335290340');
   width: 358px;
   height: 358px;
-  margin: 30px auto;
-  margin-bottom: 60px;
+  margin: 10px auto;
+  margin-bottom: 40px;
 }
 
 /* line 24, ../sass/screen.sass */
 hgroup {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 /* line 28, ../sass/screen.sass */
 hgroup h1 {
