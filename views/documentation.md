@@ -89,6 +89,23 @@ Install and require the `sequel` gem, and create a database connection:
 DB = Sequel.connect(ENV['DATABASE_URL'] || "postgres://localhost/[YOUR_DATABASE_NAME]")
 ```
 
+### PHP
+
+#### [PDO](http://www.php.net/manual/en/book.pdo.php)
+
+Make sure your PHP setup has PDO installed (it is enabled by default in PHP 5.1.0 or above), and the [PostgreSQL PDO driver](http://www.php.net/manual/en/ref.pdo-pgsql.php) is enabled. Then a database connection can be established with:
+
+``` php
+<?php
+$dbh = new PDO('pgsql:host=localhost;dbname=[YOUR_DATABASE_NAME]');
+```
+
+If other PHP database toolkits ask for a DSN string, it is as simple as
+
+```
+pgsql:host=localhost;dbname=[YOUR_DATABASE_NAME]
+```
+
 # What's Installed?
 
 Each release of Postgres.app comes with the latest stable release of PostgreSQL, as well as several of the most popular extensions. Here's a rundown of what's under the hood:
