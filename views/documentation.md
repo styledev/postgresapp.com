@@ -8,6 +8,8 @@ Whether you're a command line aficionado, prefer GUIs, or just want to start mak
 
 ## Command-Line Tools
 
+**There is a bug in the latest build that prevents `psql` from connecting, returning the error: `psql: invalid connection option "client_encoding"`. Details of the bug, as well as a workaround [can be found in this issue](https://github.com/mattt/Postgres-for-Mac/issues/7). This will be fixed in the next release.**
+
 `psql` is the PostgreSQL command-line interface to your database. Mac OS 10.7 ships with an older version of PostgreSQL, which can be started with the following command:
 
 ```
@@ -89,6 +91,24 @@ Install and require the `sequel` gem, and create a database connection:
 DB = Sequel.connect(ENV['DATABASE_URL'] || "postgres://localhost/[YOUR_DATABASE_NAME]")
 ```
 
+# I Already Have PostgreSQL Installed. How Do I Uninstall It?
+
+For best results, you should remove any existing installation of PostgreSQL. Here's a run-down of the most common ways you may have installed it previously:
+
+## Homebrew
+
+TODO
+
+## MacPorts
+
+TODO
+
+## EnterpriseDB
+
+## Compiled From Source
+
+TODO
+
 # What's Installed?
 
 Each release of Postgres.app comes with the latest stable release of PostgreSQL, as well as several of the most popular extensions. Here's a rundown of what's under the hood:
@@ -117,4 +137,5 @@ The application container resides at `~/Library/Containers/com.heroku.Postgres`,
 
 - [PostgreSQL Website](http://www.postgresql.org/) - The source for all of the latest PostgreSQL news and information.
 - [PostgreSQL Docs](http://www.postgresql.org/docs/9.1/interactive/index.html) - The canonical reference for everything you need to know about PostgreSQL.
+- [Postgres Guide](http://postgresguide.com/) - A promising new PostgreSQL resource that reads well and introduces advanced topics in a way that's easy to understand.
 - [Heroku Postgres](https://postgres.heroku.com/) - The largest and most reliable Postgres service in the world, for when it comes time to deploy and scale your database in production.
