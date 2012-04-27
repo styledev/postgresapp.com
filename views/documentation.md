@@ -105,9 +105,28 @@ TODO
 
 ## EnterpriseDB
 
+TODO
+
 ## Compiled From Source
 
 TODO
+
+### PHP
+
+#### [PDO](http://www.php.net/manual/en/book.pdo.php)
+
+Make sure your PHP setup has PDO installed (it is enabled by default in PHP 5.1.0 or above), and the [PostgreSQL PDO driver](http://www.php.net/manual/en/ref.pdo-pgsql.php) is enabled. Then a database connection can be established with:
+
+``` php
+<?php
+$dbh = new PDO('pgsql:host=localhost;dbname=[YOUR_DATABASE_NAME]');
+```
+
+If other PHP database toolkits ask for a DSN string, it is as simple as
+
+```
+pgsql:host=localhost;dbname=[YOUR_DATABASE_NAME]
+```
 
 # What's Installed?
 
