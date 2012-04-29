@@ -97,7 +97,9 @@ For best results, you should remove any existing installation of PostgreSQL. Her
 
 ## Homebrew
 
-TODO
+```
+    $ brew remove postgresql
+```
 
 ## MacPorts
 
