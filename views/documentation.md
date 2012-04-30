@@ -8,7 +8,7 @@ Whether you're a command line aficionado, prefer GUIs, or just want to start mak
 
 ## Command-Line Tools
 
-**There is a bug in the latest build that prevents `psql` from connecting, returning the error: `psql: invalid connection option "client_encoding"`. Details of the bug, as well as a workaround [can be found in this issue](https://github.com/mattt/Postgres-for-Mac/issues/7). This will be fixed in the next release.**
+**There is a bug in the latest build that prevents `psql` from connecting, returning the error: `psql: invalid connection option "client_encoding"`. Details of the bug, as well as a workaround [can be found in this issue](https://github.com/mattt/PostgresApp/issues/7). This will be fixed in the next release.**
 
 `psql` is the PostgreSQL command-line interface to your database. Mac OS 10.7 ships with an older version of PostgreSQL, which can be started with the following command:
 
