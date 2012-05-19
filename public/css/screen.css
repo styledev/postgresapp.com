@@ -1261,31 +1261,34 @@ html body {
 
 /* line 17, ../sass/screen.sass */
 .illustration {
-  background: url('/images/netsuke.png?1335290340');
+  background: url('/images/netsuke.png?1337460530') center center no-repeat;
   width: 358px;
-  height: 358px;
-  margin: 10px auto;
-  margin-bottom: 40px;
+  height: 368px;
+  margin: 10px auto 25px auto;
 }
 
-/* line 24, ../sass/screen.sass */
+/* line 23, ../sass/screen.sass */
 hgroup {
   text-align: center;
   margin-bottom: 40px;
 }
-/* line 28, ../sass/screen.sass */
+/* line 27, ../sass/screen.sass */
+hgroup h1, hgroup h2 {
+  text-shadow: white 0x 1px 1px;
+}
+/* line 30, ../sass/screen.sass */
 hgroup h1 {
   font-size: 6em;
   font-weight: bold;
   color: #262626;
   margin-bottom: 0.25em;
 }
-/* line 34, ../sass/screen.sass */
+/* line 36, ../sass/screen.sass */
 hgroup h2 {
   color: #777777;
 }
 
-/* line 37, ../sass/screen.sass */
+/* line 39, ../sass/screen.sass */
 .errata {
   text-align: center;
   text-transform: lowercase;
@@ -1294,7 +1297,7 @@ hgroup h2 {
   margin: 30px auto;
 }
 
-/* line 44, ../sass/screen.sass */
+/* line 46, ../sass/screen.sass */
 button {
   background-color: #669bc6;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #52a8e8), color-stop(100%, #377ad0));
@@ -1324,7 +1327,7 @@ button {
   display: block;
   -webkit-background-clip: padding-box;
 }
-/* line 72, ../sass/screen.sass */
+/* line 74, ../sass/screen.sass */
 button:hover {
   background-color: #3e9ee5;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e9ee5), color-stop(100%, #206bcb));
@@ -1344,7 +1347,7 @@ button:hover {
   text-shadow: 0 -1px 1px #1d62ab;
   -webkit-background-clip: padding-box;
 }
-/* line 90, ../sass/screen.sass */
+/* line 92, ../sass/screen.sass */
 button:active {
   background: #4496e1;
   border: 1px solid #154c8c;
@@ -1356,7 +1359,7 @@ button:active {
   -webkit-background-clip: padding-box;
 }
 
-/* line 102, ../sass/screen.sass */
+/* line 104, ../sass/screen.sass */
 header {
   font-size: 150%;
   border-bottom: 2px #cccccc solid;
@@ -1364,18 +1367,18 @@ header {
   text-align: center;
 }
 
-/* line 108, ../sass/screen.sass */
+/* line 110, ../sass/screen.sass */
 article {
   width: 630px;
   margin: 0 auto;
 }
 
-/* line 112, ../sass/screen.sass */
+/* line 114, ../sass/screen.sass */
 h1 {
   font-size: 2.5em;
 }
 
-/* line 115, ../sass/screen.sass */
+/* line 117, ../sass/screen.sass */
 h3 {
   border-bottom: 1px #cccccc solid;
   padding-bottom: 0.5em;
