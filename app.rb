@@ -16,6 +16,10 @@ class App < Sinatra::Base
   get '/' do
     haml :index
   end
+  
+  get '/download' do
+    redirect "http://postgres.mesmerizeapp.com/latest"
+  end
 
   get '/documentation' do
     markdown :documentation, :layout_engine => :haml

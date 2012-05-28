@@ -1,13 +1,17 @@
 !!! 5
-%html{:lang => "en"}
+%html{lang: "en"}
   %head
-    %meta{:charset => "utf-8"}
+    %meta{charset: "utf-8"}
     %title Postgres.app | the easiest way to run PostgreSQL on the Mac
-    %link{:rel => "stylesheet", :href => "/css/screen.css", :type => 'text/css', :media => "screen", :charset => "utf-8"}
+    %link{rel: "stylesheet", href: "/css/screen.css", type: 'text/css', media: "screen", charset: "utf-8"}
 
   %body
-    %div.container{:role => :main}
+    %div{role: 'container'}
       %article
         = yield
 
-    %script{:type => "text/javascript", :src => "http://static.matttthompson.com/mint/?js"}
+    %a#github.ribbon{href: "https://github.com/mattt/PostgresApp"}
+      %img{src: "/images/ribbon.png", alt: "Fork me on GitHub"}
+
+    %script{type: "text/javascript", src:  "http://static.matttthompson.com/mint/?js"}
+    

@@ -4,6 +4,14 @@
 +global-reset
 +blueprint
 
+=prevent-selection
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
 html body
   background: image-url("bg.png")
   color: #444
@@ -11,7 +19,8 @@ html body
   
   padding: 2em 0
 
-.container
+div[role='container']
+  +container
   width: +span(20)
 
 .illustration
@@ -44,6 +53,7 @@ hgroup
   margin: 30px auto
 
 button
+  +prevent-selection
   background-color: #669BC6
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #52a8e8), color-stop(100%, #377ad0))
   background-image: -webkit-linear-gradient(top, #52a8e8, #4086C2)
@@ -99,8 +109,6 @@ button
     text-shadow: 0 -1px 1px #2361A4
     -webkit-background-clip: padding-box
 
-  
-
 header
   font-size: 150%
   border-bottom: 2px #ccc solid
@@ -117,3 +125,13 @@ h1
 h3
   border-bottom: 1px #ccc solid
   padding-bottom: 0.5em
+  
+#github.ribbon
+  position: absolute
+  top: 0
+  right: 0
+  border: 0
+
+  &, &:hover
+    +transition(none)
+    background: transparent
