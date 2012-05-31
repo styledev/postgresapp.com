@@ -1254,7 +1254,7 @@ html body {
   padding: 2em 0;
 }
 
-/* line 22, ../sass/screen.sass */
+/* line 21, ../sass/screen.sass */
 div[role='container'] {
   width: 950px;
   margin: 0 auto;
@@ -1263,7 +1263,7 @@ div[role='container'] {
   width: 790px;
 }
 
-/* line 26, ../sass/screen.sass */
+/* line 25, ../sass/screen.sass */
 .illustration {
   background: url('/images/netsuke.png?1337460530') center center no-repeat;
   width: 358px;
@@ -1271,28 +1271,28 @@ div[role='container'] {
   margin: 10px auto 25px auto;
 }
 
-/* line 32, ../sass/screen.sass */
+/* line 31, ../sass/screen.sass */
 hgroup {
   text-align: center;
   margin-bottom: 40px;
 }
-/* line 36, ../sass/screen.sass */
+/* line 35, ../sass/screen.sass */
 hgroup h1, hgroup h2 {
   text-shadow: white 0x 1px 1px;
 }
-/* line 39, ../sass/screen.sass */
+/* line 38, ../sass/screen.sass */
 hgroup h1 {
   font-size: 6em;
   font-weight: bold;
   color: #262626;
   margin-bottom: 0.25em;
 }
-/* line 45, ../sass/screen.sass */
+/* line 44, ../sass/screen.sass */
 hgroup h2 {
   color: #777777;
 }
 
-/* line 48, ../sass/screen.sass */
+/* line 47, ../sass/screen.sass */
 .errata {
   text-align: center;
   text-transform: lowercase;
@@ -1301,7 +1301,7 @@ hgroup h2 {
   margin: 30px auto;
 }
 
-/* line 55, ../sass/screen.sass */
+/* line 54, ../sass/screen.sass */
 button {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -1337,7 +1337,7 @@ button {
   display: block;
   -webkit-background-clip: padding-box;
 }
-/* line 84, ../sass/screen.sass */
+/* line 83, ../sass/screen.sass */
 button:hover {
   background-color: #3e9ee5;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e9ee5), color-stop(100%, #206bcb));
@@ -1357,7 +1357,7 @@ button:hover {
   text-shadow: 0 -1px 1px #1d62ab;
   -webkit-background-clip: padding-box;
 }
-/* line 102, ../sass/screen.sass */
+/* line 101, ../sass/screen.sass */
 button:active {
   background: #4496e1;
   border: 1px solid #154c8c;
@@ -1369,7 +1369,7 @@ button:active {
   -webkit-background-clip: padding-box;
 }
 
-/* line 112, ../sass/screen.sass */
+/* line 111, ../sass/screen.sass */
 header {
   font-size: 150%;
   border-bottom: 2px #cccccc solid;
@@ -1377,31 +1377,31 @@ header {
   text-align: center;
 }
 
-/* line 118, ../sass/screen.sass */
+/* line 117, ../sass/screen.sass */
 article {
   width: 630px;
   margin: 0 auto;
 }
 
-/* line 122, ../sass/screen.sass */
+/* line 121, ../sass/screen.sass */
 h1 {
   font-size: 2.5em;
 }
 
-/* line 125, ../sass/screen.sass */
+/* line 124, ../sass/screen.sass */
 h3 {
   border-bottom: 1px #cccccc solid;
   padding-bottom: 0.5em;
 }
 
-/* line 129, ../sass/screen.sass */
+/* line 128, ../sass/screen.sass */
 #github.ribbon {
   position: absolute;
   top: 0;
   right: 0;
   border: 0;
 }
-/* line 135, ../sass/screen.sass */
+/* line 134, ../sass/screen.sass */
 #github.ribbon, #github.ribbon:hover {
   -moz-transition: none;
   -webkit-transition: none;

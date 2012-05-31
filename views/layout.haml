@@ -6,12 +6,12 @@
     %link{rel: "stylesheet", href: "/css/documentation.css", type: 'text/css', media: "screen", charset: "utf-8"}
 
   %body
-    %header
-      %div{role: 'container'}
-        %h1#logo Postgres.app
-
     %div{role: 'container'}
       %aside
+        %header
+          %div{role: 'container'}
+            %h1#logo
+              %a{href: "/"} Postgres.app
         %nav.toc
           = @toc
 

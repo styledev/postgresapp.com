@@ -1,26 +1,30 @@
 class App < Sinatra::Base
+  set :markdown, layout_engine: :haml
+  
   helpers do
     def markdown(template, options = {}, locals = {})
       options.merge!({
-        layout_engine: 'haml',
         hard_wrap: true,
         filter_html: true,
         autolink: true,
         no_intraemphasis: true,
-        fenced_code: true,
-        gh_blockcode: true
+        fenced_code_blocks: true,
+        gh_codeblock: true,
+        with_toc_data: true
       })
 
       @toc = render(:markdown, template, options.merge(renderer: Redcarpet::Render::HTML_TOC, layout: false), locals)
 
-      render(:markdown, template, options.merge(renderer: Redcarpet::Render::HTML.new(with_toc_data: true)), locals)
+      render(:markdown, template, options.merge(renderer: HTMLwithAlbino.new(with_toc_data: true)), locals)
     end
   end
-
-
+  
+  before do
+    cache_control :public, :must_revalidate, :max_age => 3600
+  end
 
   get '/' do
-    haml :index
+    haml :index, layout: false
   end
 
   get '/download' do
@@ -31,3 +35,10 @@ class App < Sinatra::Base
     markdown :documentation
   end
 end
+
+class HTMLwithAlbino < Redcarpet::Render::HTML
+  def block_code(code, language)
+    Albino.colorize((code || "").strip, language || :text)
+  end
+end
+

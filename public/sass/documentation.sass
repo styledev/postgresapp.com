@@ -1,6 +1,16 @@
 @import "compass"
 @import "blueprint"
 
+@import "./pygments"
+
+=prevent-selection
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
 +global-reset
 +blueprint
 
@@ -8,32 +18,90 @@ html body
   -webkit-text-stroke: 1px transparent
   -webkit-background-clip: padding-box
 
-  ::selection, ::-moz-selection
-    +text-shadow(0 1px 1px #222)
-    background: #333
-    color: #fff
+  background: image-url("bg.png")
+  color: #444
+  font-family: "helvetica neue", helvetica, arial, sans-serif
+  font-size: 93%
+  padding: 2em 0
 
-  & > header
-    background: #222
-    padding: 1em
-    margin-bottom: 2em
-    
+  div[role='container']
+    +container
+
+    a
+      +link-colors(#3381B1)
+      text-decoration: none
+      
+      &:hover
+        text-decoration: underline
+
+aside
+  +column(8)
+  +prevent-selection
+  position: fixed
+  overflow: scroll-y
+
+  header
+    margin-bottom: 1.75em
+
     h1#logo
-      color: #fff
-      font-weight: bold
       line-height: 1em
       margin: 0
       background: image-url('netsuke-small.png') no-repeat left center
+      font-size: 2.5em
+      font-weight: bold
       padding-left: 50px + 15px
-      min-height: 50px
+      padding-top: 5px
+      min-height: 45px
       
-div[role='container']
-  +container
+      a
+        color: #444
+        text-decoration: none !important
   
-  aside
-    +column(6)
-    position: fixed
+  ul:first-child
+    padding-left: 84px
     
-  article
-    +prepend(6)
-    +column(18, true)
+    ul
+      font-size: 0.875em
+      margin-bottom: 1em
+      
+      ul
+        display: none
+
+article
+  +prepend(9)
+  +column(15, true)
+
+  padding:
+    top: 5em
+
+  h1
+    font-size: 2em
+    margin-top: 1.5em
+    margin-bottom: 1em
+
+  h2
+    font-size: 1.5em
+    border-bottom: 1px #ddd solid
+
+  h3
+    font-size: 1.25em
+
+  p
+    &:first-child
+      font-size: 1.25em
+      font-weight: bold
+      
+  code
+    color: #758499
+
+  .highlight
+    +border-radius(5px)
+    background: #2a2a2a
+    color: #fff
+    padding: 1em
+      bottom: 0
+    margin-bottom: 2em
+
+    pre
+      margin: 0
+      overflow: scroll

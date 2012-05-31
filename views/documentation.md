@@ -1,42 +1,34 @@
-# About
-
 Postgres.app is the easiest way to get started with PostgreSQL on the Mac. Open the app, and you have a PostgreSQL server ready and awaiting new connections. Close the app, and the server shuts down.
-
-# How Do I Use It?
 
 Whether you're a command line aficionado, prefer GUIs, or just want to start making things with your framework of choice, connecting to Postgres.app is easy.
 
-## Command-Line Tools
-
-**There is a bug in the latest build that prevents `psql` from connecting, returning the error: `psql: invalid connection option "client_encoding"`. Details of the bug, as well as a workaround [can be found in this issue](https://github.com/mattt/PostgresApp/issues/7). This will be fixed in the next release.**
+# Command-Line Tools
 
 `psql` is the PostgreSQL command-line interface to your database. Mac OS 10.7 ships with an older version of PostgreSQL, which can be started with the following command:
 
+```bash
+$ psql -h localhost
 ```
-    $ psql -h localhost
-```
-
-### Add Binaries to Your `PATH`
 
 PostgreSQL ships with a constellation of useful binaries, like `pg_dump` or `pg_restore`, that you will likely want to use. Go ahead and add the `/bin` directory that ships with Postgres.app to your `PATH` (preferably in `.profile`, `.bashrc`, `.zshrc`, or the like to make sure this gets set for every Terminal session):
 
-```
-    PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+```bash
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 ```
 
 Once your path is correctly set up, you should be able to run `psql` without a host. (If not, check that the correct version is being loaded in the `PATH` by doing `which psql`)
 
-## GUI Applications
+# GUI Applications
 
 Explore, query, and visualize your data with [Induction](http://inductionapp.com/). Although still in early development, Induction is fast and easy to use, and is our go-to application when working with data.
 
 If you're looking for something more fully-featured and don't mind getting the kitchen sink in the process, check out [pgAdmin](http://www.pgadmin.org/).
 
-## Configuration Settings
+# Configuration Settings
 
 Building a web application and want to skip to the part where everything works? Select the connection settings for your language, framework, and library of choice:
 
-### Ruby
+## Ruby
 
 Install the `pg` gem with `gem install pg`, or just add `gem 'pg'` to your application's `Gemfile` and run `bundle install`
 
@@ -48,7 +40,7 @@ DATABASE_URL=postgres://postgres@localhost/[YOUR_DATABASE_NAME]
 
 You can learn more about environment variables from [this Heroku Dev Center article](https://devcenter.heroku.com/articles/config-vars).
 
-#### [Rails](http://rubyonrails.org/)
+### [Rails](http://rubyonrails.org/)
 
 In `config/database.yml`, use the following settings:
 
@@ -59,7 +51,7 @@ development:
   host: localhost
 ```
 
-#### [Sinatra](http://www.sinatrarb.com/)
+### [Sinatra](http://www.sinatrarb.com/)
 
 In `config.ru` or your application code:
 
@@ -67,7 +59,7 @@ In `config.ru` or your application code:
 set :database, ENV['DATABASE_URL'] || 'postgres://localhost/[YOUR_DATABASE_NAME]'
 ```
 
-#### [ActiveRecord](http://ar.rubyonrails.org/)
+### [ActiveRecord](http://ar.rubyonrails.org/)
 
 Install the `activerecord` gem and `require 'active_record'`, and establish a database connection:
 
@@ -75,7 +67,7 @@ Install the `activerecord` gem and `require 'active_record'`, and establish a da
 ActiveRecord::Base.establish_connection(ENV["DATABASE_URL"])
 ```
 
-#### [DataMapper](http://datamapper.org/)
+### [DataMapper](http://datamapper.org/)
 
 Install and require the `datamapper` and `do_postgres` gems, and create a database connection:
 
@@ -83,7 +75,7 @@ Install and require the `datamapper` and `do_postgres` gems, and create a databa
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/[YOUR_DATABASE_NAME]")
 ```
 
-#### [Sequel](http://sequel.rubyforge.org/)
+### [Sequel](http://sequel.rubyforge.org/)
 
 Install and require the `sequel` gem, and create a database connection:
 
@@ -91,11 +83,11 @@ Install and require the `sequel` gem, and create a database connection:
 DB = Sequel.connect(ENV['DATABASE_URL'] || "postgres://localhost/[YOUR_DATABASE_NAME]")
 ```
 
-### [Python](http://www.python.org/)
+## Python
 
-Install the `psycopg2` library with with `pip install psycopg2` or add it to your pip requirements file. 
+Install the `psycopg2` library with with `pip install psycopg2` or add it to your pip requirements file.
 
-#### [Django](http://www.djangoproject.com/)
+### [Django](http://www.djangoproject.com/)
 
 In your `settings.py`, add an entry to your `DATABASES` setting:
 
@@ -112,7 +104,7 @@ DATABASES = {
 }
 ```
 
-#### [Flask](Flask)
+### [Flask](Flask)
 
 When using the [Flask-SQLAlchemy](http://packages.python.org/Flask-SQLAlchemy/)
 extension you can add to your application code:
@@ -126,7 +118,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/[YOUR_DATABASE_N
 db = SQLAlchemy(app)
 ```
 
-#### [SQLAlchemy](http://www.sqlalchemy.org/)
+### [SQLAlchemy](http://www.sqlalchemy.org/)
 
 In your application code add:
 
@@ -135,31 +127,9 @@ from sqlalchemy import create_engine
 engine = create_engine('postgresql://localhost/[YOUR_DATABASE_NAME]')
 ```
 
-# I Already Have PostgreSQL Installed. How Do I Uninstall It?
+## PHP
 
-For best results, you should remove any existing installation of PostgreSQL. Here's a run-down of the most common ways you may have installed it previously:
-
-## Homebrew
-
-```
-    $ brew remove postgresql
-```
-
-## MacPorts
-
-TODO
-
-## EnterpriseDB
-
-TODO
-
-## Compiled From Source
-
-TODO
-
-### PHP
-
-#### [PDO](http://www.php.net/manual/en/book.pdo.php)
+### [PDO](http://www.php.net/manual/en/book.pdo.php)
 
 Make sure your PHP setup has PDO installed (it is enabled by default in PHP 5.1.0 or above), and the [PostgreSQL PDO driver](http://www.php.net/manual/en/ref.pdo-pgsql.php) is enabled. Then a database connection can be established with:
 
@@ -168,23 +138,35 @@ Make sure your PHP setup has PDO installed (it is enabled by default in PHP 5.1.
 $dbh = new PDO('pgsql:host=localhost;dbname=[YOUR_DATABASE_NAME]');
 ```
 
-If other PHP database toolkits ask for a DSN string, it is as simple as
+# Removing Existing PostgreSQL Installations
 
+For best results, you should remove any existing installation of PostgreSQL. Here's a run-down of the most common ways you may have installed it previously:
+
+## Homebrew
+
+``` bash
+$ brew remove postgresql
+````
+
+## MacPorts
+
+``` bash
+$ sudo port uninstall postgres
 ```
-pgsql:host=localhost;dbname=[YOUR_DATABASE_NAME]
-```
 
-# What's Installed?
+## EnterpriseDB
 
-Each release of Postgres.app comes with the latest stable release of PostgreSQL, as well as several of the most popular extensions. Here's a rundown of what's under the hood:
+In the EnterpriseDB installation directory, open `uninstall-postgresql.app`.
+
+# Included Packages
+
+Each release of Postgres.app comes with the latest stable release of PostgreSQL, as well a few choice extensions. Here's a rundown of what's under the hood:
 
 - [PostgreSQL 9.1.3](http://www.postgresql.org/)
 - [PostGIS 2.0.0](http://postgis.refractions.net/)
-- [GDAL 1.9.0](http://www.gdal.org/)
-- [GEOS 3.3.2](http://trac.osgeo.org/geos/)
-- [PROJ.4 4.7.0](http://trac.osgeo.org/proj/)
+- [plv8](http://code.google.com/p/plv8js/wiki/PLV8)
 
-# Where Is Everything Installed?
+# Installation Directories
 
 - Binaries: `/Applications/Postgres.app/Contents/MacOS/bin`
 - Headers: `/Applications/Postgres.app/Contents/MacOS/include`
@@ -192,7 +174,7 @@ Each release of Postgres.app comes with the latest stable release of PostgreSQL,
 - Shared Libraries: `/Applications/Postgres.app/Contents/MacOS/share`
 - Data: `~/Library/Containers/com.heroku.Postgres/Data/Library/Application\ Support/Postgres/var`
 
-# How To Uninstall
+# Uninstalling
 
 Uninstall Postgres.app just like you would any application: quit, drag to the Trash, and Empty Trash.
 
