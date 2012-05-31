@@ -1521,4 +1521,5 @@ article .highlight pre, article pre pre {
 /* line 109, ../sass/documentation.sass */
 article .highlight code, article pre code {
   color: #dddddd;
+  overflow: scroll;
 }
