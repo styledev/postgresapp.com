@@ -15,7 +15,7 @@ class App < Sinatra::Base
 
       @toc = render(:markdown, template, options.merge(renderer: Redcarpet::Render::HTML_TOC, layout: false), locals)
 
-      render(:markdown, template, options.merge(renderer: HTMLwithAlbino.new(with_toc_data: true)), locals)
+      render(:markdown, template, options.merge(renderer: Redcarpet::Render::HTML.new(with_toc_data: true)), locals)
     end
   end
   

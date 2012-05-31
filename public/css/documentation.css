@@ -1436,7 +1436,7 @@ aside header {
 aside header h1#logo {
   line-height: 1em;
   margin: 0;
-  background: url('/images/netsuke-small.png?1338487116') no-repeat left center;
+  background: url('/images/netsuke-small.png?1338500322') no-repeat left center;
   font-size: 2.5em;
   font-weight: bold;
   padding-left: 65px;
@@ -1500,7 +1500,7 @@ article code {
   color: #758499;
 }
 /* line 97, ../sass/documentation.sass */
-article .highlight {
+article .highlight, article pre {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -1514,7 +1514,11 @@ article .highlight {
   margin-bottom: 2em;
 }
 /* line 105, ../sass/documentation.sass */
-article .highlight pre {
+article .highlight pre, article pre pre {
   margin: 0;
   overflow: scroll;
+}
+/* line 109, ../sass/documentation.sass */
+article .highlight code, article pre code {
+  color: #dddddd;
 }
