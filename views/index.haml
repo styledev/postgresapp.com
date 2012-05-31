@@ -1,11 +1,30 @@
-%figure.illustration.netsuke
+!!! 5
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}
+    %title Postgres.app | the easiest way to run PostgreSQL on the Mac
+    %meta{:name => "author", :content => "Mattt Thompson"}
+    %meta{:name => "description", :content => "Postgres.app is the easiest way to get started with PostgreSQL on the Mac. Open the app, and you have a PostgreSQL server ready and awaiting new connections. Close the app, and the server shuts down."}
+    %link{:rel => "license", :href => "http://www.opensource.org/licenses/postgresql", :title => "PostgreSQL License"}
+    %link{rel: "stylesheet", href: "/css/screen.css", type: 'text/css', media: "screen", charset: "utf-8"}
 
-%hgroup
-  %h1 Postgres.app
-  %h2 the easiest way to run PostgreSQL on the Mac
-  
-%button.download{:onclick => "window.location.href='/download'"}
-  Download the Latest Beta
-  
-%span.errata
-  Coming Soon to the Mac App Store
+  %body
+    %div{role: 'container'}
+      %article
+        %figure.illustration.netsuke
+
+        %hgroup
+          %h1 Postgres.app
+          %h2 the easiest way to run PostgreSQL on the Mac
+
+        %button.download{:onclick => "window.location.href='/download'"}
+          Download the Latest Beta
+
+        %span.errata
+          Coming Soon to the Mac App Store
+
+    %a#github.ribbon{href: "https://github.com/mattt/PostgresApp"}
+      %img{src: "/images/ribbon.png", alt: "Fork me on GitHub"}
+
+    %script{type: "text/javascript", src:  "http://static.matttthompson.com/mint/?js"}
+

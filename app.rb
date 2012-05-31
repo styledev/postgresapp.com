@@ -1,27 +1,33 @@
-require 'sinatra'
-require 'haml'
-require 'json'
-require 'redcarpet'
-
-STDOUT.sync = true
-
 class App < Sinatra::Base
   helpers do
-    def partial(page, variables = {})
-      *directories, file = page.to_s.split(/\//)
-      haml "#{directories.join("/")}_#{file}".to_sym, { :layout => false }, variables
+    def markdown(template, options = {}, locals = {})
+      options.merge!({
+        layout_engine: 'haml',
+        hard_wrap: true,
+        filter_html: true,
+        autolink: true,
+        no_intraemphasis: true,
+        fenced_code: true,
+        gh_blockcode: true
+      })
+
+      @toc = render(:markdown, template, options.merge(renderer: Redcarpet::Render::HTML_TOC, layout: false), locals)
+
+      render(:markdown, template, options.merge(renderer: Redcarpet::Render::HTML.new(with_toc_data: true)), locals)
     end
   end
-  
+
+
+
   get '/' do
     haml :index
   end
-  
+
   get '/download' do
     redirect "http://postgres.mesmerizeapp.com/latest"
   end
 
   get '/documentation' do
-    markdown :documentation, :layout_engine => :haml
+    markdown :documentation
   end
 end

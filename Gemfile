@@ -1,8 +1,10 @@
 source :rubygems
 
-gem 'sinatra'
+gem 'sinatra', require: 'sinatra/base'
 gem 'haml'
 gem 'redcarpet'
+
+gem 'tilt', git: 'git://github.com/rtomayko/tilt.git'
 
 gem 'thin'
 

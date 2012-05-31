@@ -1,0 +1,39 @@
+@import "compass"
+@import "blueprint"
+
++global-reset
++blueprint
+
+html body
+  -webkit-text-stroke: 1px transparent
+  -webkit-background-clip: padding-box
+
+  ::selection, ::-moz-selection
+    +text-shadow(0 1px 1px #222)
+    background: #333
+    color: #fff
+
+  & > header
+    background: #222
+    padding: 1em
+    margin-bottom: 2em
+    
+    h1#logo
+      color: #fff
+      font-weight: bold
+      line-height: 1em
+      margin: 0
+      background: image-url('netsuke-small.png') no-repeat left center
+      padding-left: 50px + 15px
+      min-height: 50px
+      
+div[role='container']
+  +container
+  
+  aside
+    +column(6)
+    position: fixed
+    
+  article
+    +prepend(6)
+    +column(18, true)
