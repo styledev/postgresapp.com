@@ -1497,7 +1497,7 @@ article p:first-child {
 }
 /* line 94, ../sass/documentation.sass */
 article code {
-  color: #758499;
+  color: #575a5f;
 }
 /* line 97, ../sass/documentation.sass */
 article .highlight, article pre {
@@ -1508,7 +1508,7 @@ article .highlight, article pre {
   -khtml-border-radius: 5px;
   border-radius: 5px;
   background: #2a2a2a;
-  color: white;
+  color: #dddddd;
   padding: 1em;
   padding-bottom: 0;
   margin-bottom: 2em;
