@@ -1478,28 +1478,30 @@ article {
 /* line 77, ../sass/documentation.sass */
 article h1 {
   font-size: 2em;
-  margin-top: 1.5em;
+  padding-top: 1.375em;
   margin-bottom: 1em;
 }
 /* line 82, ../sass/documentation.sass */
 article h2 {
   font-size: 1.5em;
+  padding-top: 2em;
+  margin-top: -1em;
   border-bottom: 1px #dddddd solid;
 }
-/* line 86, ../sass/documentation.sass */
+/* line 88, ../sass/documentation.sass */
 article h3 {
   font-size: 1.25em;
 }
-/* line 90, ../sass/documentation.sass */
+/* line 92, ../sass/documentation.sass */
 article p:first-child {
   font-size: 1.25em;
   font-weight: bold;
 }
-/* line 94, ../sass/documentation.sass */
+/* line 96, ../sass/documentation.sass */
 article code {
   color: #575a5f;
 }
-/* line 97, ../sass/documentation.sass */
+/* line 99, ../sass/documentation.sass */
 article .highlight, article pre {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1513,12 +1515,12 @@ article .highlight, article pre {
   padding-bottom: 0;
   margin-bottom: 2em;
 }
-/* line 105, ../sass/documentation.sass */
+/* line 107, ../sass/documentation.sass */
 article .highlight pre, article pre pre {
   margin: 0;
   overflow: scroll;
 }
-/* line 109, ../sass/documentation.sass */
+/* line 111, ../sass/documentation.sass */
 article .highlight code, article pre code {
   color: #dddddd;
   overflow: scroll;
