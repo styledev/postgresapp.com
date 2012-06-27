@@ -7,7 +7,7 @@
     %meta{:name => "description", :content => "Postgres.app is the easiest way to get started with PostgreSQL on the Mac. Open the app, and you have a PostgreSQL server ready and awaiting new connections. Close the app, and the server shuts down."}
     %link{:rel => "license", :href => "http://www.opensource.org/licenses/postgresql", :title => "PostgreSQL License"}
     %link{rel: "stylesheet", href: "/css/screen.css", type: 'text/css', media: "screen", charset: "utf-8"}
-    
+
     %meta{property: "og:title", content: "Postgres.app"}
     %meta{property: "og:url", content: "http://postgresapp.com"}
     %meta{property: "og:image",  content: "http://postgresapp.com/images/netsuke.png"}
@@ -24,13 +24,26 @@
           %h2 the easiest way to run PostgreSQL on the Mac
 
         %button.download{:onclick => "window.location.href='/download'"}
-          Download the Latest Beta
+          %mark.symbol ⬇
+          %span Download the Latest Beta
 
-        %span.errata
-          Coming Soon to the Mac App Store
+        %footer
+          %p
+            Created by
+            %a{href: "http://mattt.me/"} Mattt Thompson
+            & supported by
+            %a{href: "http://postgres.heroku.com/"} Heroku Postgres
+
+          .share
+            :plain
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://postgresapp.com" data-via="PostgresApp">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+            :plain
+              <a href="https://twitter.com/PostgresApp" class="twitter-follow-button" data-show-count="false">Follow @PostgresApp</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
     %a#github.ribbon{href: "https://github.com/mattt/PostgresApp"}
       %img{src: "/images/ribbon.png", alt: "Fork me on GitHub"}
 
     %script{type: "text/javascript", src:  "http://static.matttthompson.com/mint/?js"}
-

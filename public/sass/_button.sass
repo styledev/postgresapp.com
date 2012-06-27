@@ -1,0 +1,72 @@
+button
+  +transition(background-image 0.1s)
+  height: 28px
+  line-height: 28px
+  padding: 4px 12px
+  font-size: 1em
+  font-weight: bold
+  color: #555555
+  text-shadow: 0 1px #fff
+  background-color: #dfdfdf
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1f1f1), color-stop(70%, #dfdfdf), color-stop(100%, #dadada))
+  background-image: -webkit-linear-gradient(top, #f1f1f1 0%, #dfdfdf 70%, #dadada 100%)
+  background-image: -moz-linear-gradient(top, #f1f1f1 0%, #dfdfdf 70%, #dadada 100%)
+  background-image: -ms-linear-gradient(top, #f1f1f1 0%, #dfdfdf 70%, #dadada 100%)
+  background-image: -o-linear-gradient(top, #f1f1f1 0%, #dfdfdf 70%, #dadada 100%)
+  background-image: linear-gradient(top, #f1f1f1 0%, #dfdfdf 70%, #dadada 100%)
+  -webkit-box-shadow: inset 0 1px #fdfdfd, inset 0 0 0 1px #eaeaea, 0 1px #a8a8a8, 0 3px #bbbbbb, 0 4px #a8a8a8, 0 5px 2px rgba(0, 0, 0, 0.25)
+  -moz-box-shadow: inset 0 1px #fdfdfd, inset 0 0 0 1px #eaeaea, 0 1px #a8a8a8, 0 3px #bbbbbb, 0 4px #a8a8a8, 0 5px 2px rgba(0, 0, 0, 0.25)
+  box-shadow: inset 0 1px #fdfdfd, inset 0 0 0 1px #eaeaea, 0 1px #a8a8a8, 0 3px #bbbbbb, 0 4px #a8a8a8, 0 5px 2px rgba(0, 0, 0, 0.25)
+  border-width: 1px 1px 0
+  border-style: solid
+  border-color: #cecece #bababa #a8a8a8
+  border-radius: 3px 3px 2px 2px
+  outline: none
+  -webkit-box-sizing: content-box
+  -moz-box-sizing: content-box
+  box-sizing: content-box
+  display: block
+  vertical-align: baseline
+  margin: 40px auto
+  zoom: 1
+  *display: inline
+  *vertical-align: auto
+  width: 250px
+
+  &:hover, &:active
+    background: #dfdfdf
+    border-top-color: #c9c9c9
+
+  &:hover
+    text-decoration: none
+
+  &:active
+    text-decoration: none
+
+    vertical-align: -5px
+    margin-top: 45px
+    margin-bottom: 36px
+    padding: 5px 13px 3px
+    border-width: 0
+    border-radius: 3px
+
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px white
+    -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px white
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px white
+
+  mark.symbol
+    +transition(color 0.2s)
+    background: transparent
+    color: #444
+    position: absolute
+    font-size: 1.5em
+    margin-left: 12px
+    margin-top: 2px
+    
+  &:hover .symbol
+    color: #389AE4
+    
+  span
+    margin-left: 1.25em
+    display: block
+  

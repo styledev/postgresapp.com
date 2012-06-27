@@ -1,6 +1,6 @@
 class Web < Sinatra::Base
   get '/' do
-    cache_control :public, :must_revalidate, max_age: 3600
+    # cache_control :public, :must_revalidate, max_age: 3600
     
     haml :index, layout: false
   end
