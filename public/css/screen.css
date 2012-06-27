@@ -1248,7 +1248,7 @@ textarea {
 
 /* line 15, ../sass/screen.sass */
 html body {
-  background: url('/images/bg.png?1335290168');
+  background: url('/images/bg.png?1335290168') center top fixed;
   color: #444444;
   font-family: "helvetica neue", helvetica, arial, sans-serif;
   padding: 2em 0;

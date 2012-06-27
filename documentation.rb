@@ -1,6 +1,6 @@
-class App < Sinatra::Base
+class Documentation < Sinatra::Base
   set :markdown, layout_engine: :haml
-  
+
   helpers do
     def markdown(template, options = {}, locals = {})
       options.merge!({
@@ -18,20 +18,10 @@ class App < Sinatra::Base
       render(:markdown, template, options.merge(renderer: Redcarpet::Render::HTML.new(with_toc_data: true)), locals)
     end
   end
-  
-  before do
-    cache_control :public, :must_revalidate, :max_age => 3600
-  end
 
   get '/' do
-    haml :index, layout: false
-  end
-
-  get '/download' do
-    redirect "http://postgres.mesmerizeapp.com/latest"
-  end
-
-  get '/documentation' do
+    cache_control :public, :must_revalidate, max_age: 3600
+    
     markdown :documentation
   end
 end
@@ -41,4 +31,3 @@ class HTMLwithAlbino < Redcarpet::Render::HTML
     Albino.colorize((code || "").strip, language || :text)
   end
 end
-
