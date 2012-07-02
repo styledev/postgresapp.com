@@ -1382,34 +1382,34 @@ textarea {
   height: 250px;
 }
 
-/* line 17, ../sass/documentation.sass */
+/* line 10, ../sass/documentation.sass */
 html body {
   -webkit-text-stroke: 1px transparent;
   -webkit-background-clip: padding-box;
-  background: url('/images/bg.png?1335290168');
+  background: #f3f3f3 url('/images/bg.jpg?1341262508') top center;
   color: #444444;
   font-family: "helvetica neue", helvetica, arial, sans-serif;
   font-size: 93%;
   padding: 2em 0;
 }
-/* line 27, ../sass/documentation.sass */
+/* line 20, ../sass/documentation.sass */
 html body div[role='container'] {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 30, ../sass/documentation.sass */
+/* line 23, ../sass/documentation.sass */
 html body div[role='container'] a {
   color: #3381b1;
   text-decoration: none;
 }
-/* line 34, ../sass/documentation.sass */
+/* line 27, ../sass/documentation.sass */
 html body div[role='container'] a:hover {
   text-decoration: underline;
 }
 
-/* line 37, ../sass/documentation.sass */
+/* line 30, ../sass/documentation.sass */
 aside {
   display: inline;
   float: left;
@@ -1428,11 +1428,11 @@ aside {
 * html aside {
   overflow-x: hidden;
 }
-/* line 43, ../sass/documentation.sass */
+/* line 36, ../sass/documentation.sass */
 aside header {
   margin-bottom: 1.75em;
 }
-/* line 46, ../sass/documentation.sass */
+/* line 39, ../sass/documentation.sass */
 aside header h1#logo {
   line-height: 1em;
   margin: 0;
@@ -1443,26 +1443,26 @@ aside header h1#logo {
   padding-top: 5px;
   min-height: 45px;
 }
-/* line 56, ../sass/documentation.sass */
+/* line 49, ../sass/documentation.sass */
 aside header h1#logo a {
   color: #444444;
   text-decoration: none !important;
 }
-/* line 60, ../sass/documentation.sass */
+/* line 53, ../sass/documentation.sass */
 aside ul:first-child {
   padding-left: 84px;
 }
-/* line 63, ../sass/documentation.sass */
+/* line 56, ../sass/documentation.sass */
 aside ul:first-child ul {
   font-size: 0.875em;
   margin-bottom: 1em;
 }
-/* line 67, ../sass/documentation.sass */
+/* line 60, ../sass/documentation.sass */
 aside ul:first-child ul ul {
   display: none;
 }
 
-/* line 70, ../sass/documentation.sass */
+/* line 63, ../sass/documentation.sass */
 article {
   padding-left: 360px;
   display: inline;
@@ -1475,33 +1475,33 @@ article {
 * html article {
   overflow-x: hidden;
 }
-/* line 77, ../sass/documentation.sass */
+/* line 70, ../sass/documentation.sass */
 article h1 {
   font-size: 2em;
   padding-top: 1.375em;
   margin-bottom: 1em;
 }
-/* line 82, ../sass/documentation.sass */
+/* line 75, ../sass/documentation.sass */
 article h2 {
   font-size: 1.5em;
   padding-top: 2em;
   margin-top: -1em;
   border-bottom: 1px #dddddd solid;
 }
-/* line 88, ../sass/documentation.sass */
+/* line 81, ../sass/documentation.sass */
 article h3 {
   font-size: 1.25em;
 }
-/* line 92, ../sass/documentation.sass */
+/* line 85, ../sass/documentation.sass */
 article p:first-child {
   font-size: 1.25em;
   font-weight: bold;
 }
-/* line 96, ../sass/documentation.sass */
+/* line 89, ../sass/documentation.sass */
 article code {
   color: #575a5f;
 }
-/* line 99, ../sass/documentation.sass */
+/* line 92, ../sass/documentation.sass */
 article .highlight, article pre {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1515,12 +1515,12 @@ article .highlight, article pre {
   padding-bottom: 0;
   margin-bottom: 2em;
 }
-/* line 107, ../sass/documentation.sass */
+/* line 100, ../sass/documentation.sass */
 article .highlight pre, article pre pre {
   margin: 0;
   overflow: scroll;
 }
-/* line 111, ../sass/documentation.sass */
+/* line 104, ../sass/documentation.sass */
 article .highlight code, article pre code {
   color: #dddddd;
   overflow: scroll;

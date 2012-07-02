@@ -1353,7 +1353,7 @@ textarea {
 
 /* line 11, ../sass/screen.sass */
 html body {
-  background: url('/images/bg.png?1335290168') top center;
+  background: #f3f3f3 url('/images/bg.jpg?1341262508') top center;
   color: #444444;
   font-family: "helvetica neue", helvetica, arial, sans-serif;
   padding: 2em 0;

@@ -2,14 +2,7 @@
 @import "blueprint"
 
 @import "./pygments"
-
-=prevent-selection
-  -webkit-touch-callout: none
-  -webkit-user-select: none
-  -khtml-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
-  user-select: none
+@import "./functions"
 
 +global-reset
 +blueprint
@@ -18,7 +11,7 @@ html body
   -webkit-text-stroke: 1px transparent
   -webkit-background-clip: padding-box
 
-  background: image-url("bg.png")
+  background: #f3f3f3 image-url("bg.jpg") top center
   color: #444
   font-family: "helvetica neue", helvetica, arial, sans-serif
   font-size: 93%
