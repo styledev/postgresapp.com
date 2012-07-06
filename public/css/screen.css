@@ -1365,14 +1365,14 @@ div[role='container'] {
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  width: 790px;
+  width: 630px;
 }
 
 /* line 21, ../sass/screen.sass */
 .illustration {
-  background: url('/images/netsuke.png?1340836163') center center no-repeat;
-  width: 358px;
-  height: 308px;
+  background: url('/images/netsuke.png?1341593257') center center no-repeat;
+  width: 308px;
+  height: 305px;
   margin: 0 auto 25px auto;
 }
 
@@ -1389,7 +1389,7 @@ hgroup h1, hgroup h2 {
 hgroup h1 {
   font-size: 6em;
   font-weight: bold;
-  color: #262626;
+  color: #323232;
   margin-bottom: 0.125em;
 }
 /* line 40, ../sass/screen.sass */
