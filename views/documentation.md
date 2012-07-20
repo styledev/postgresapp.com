@@ -18,6 +18,20 @@ PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 Once your path is correctly set up, you should be able to run `psql` without a host. (If not, check that the correct version is being loaded in the `PATH` by doing `which psql`)
 
+By default, Postgres.app create a database named by your username on your mac (to find it, it's the name before your prompt). This username is also, by default, the username to use in the connection of the database.
+
+To create your first database, connect with the psql command and use the following command:
+
+```bash
+CREATE DATABASE theNameOfTheDatabase;
+```
+
+If you want to drop it, use:
+
+```bash
+DROP DATABASE theNameOfTheDatabase;
+```
+
 # GUI Applications
 
 Explore, query, and visualize your data with [Induction](http://inductionapp.com/). Although still in early development, Induction is fast and easy to use, and is our go-to application when working with data.
