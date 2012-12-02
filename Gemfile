@@ -7,7 +7,7 @@ gem 'albino'
 
 gem 'tilt', git: 'git://github.com/rtomayko/tilt.git'
 
-gem 'rack-google-analytics', require: 'rack/google-analytics'
+gem 'rack-chartbeat', require: 'rack/chartbeat'
 
 gem 'thin'
 
