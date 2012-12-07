@@ -21,6 +21,8 @@ class Documentation < Sinatra::Base
 
   get '/' do
     cache_control :public, :must_revalidate, max_age: 3600
+
+    @title = "Documentation"
     
     markdown :documentation
   end
