@@ -2,6 +2,12 @@ Postgres.app is the easiest way to get started with PostgreSQL on the Mac. Open 
 
 Whether you're a command line aficionado, prefer GUIs, or just want to start making things with your framework of choice, connecting to Postgres.app is easy.
 
+# Upgrading From A Previous Version
+
+Starting with Version 9.2.2.0, Postgres.app is using semantic versioning, tied to the release of PostgreSQL provided in the release, with the final number corresponding to the individual releases of PostgresApp for each distribution.
+
+If you are upgrading Postgres.app to a new minor release (e.g. 9.1 to 9.2), you will need to manually migrate your data from the previous version (which has been moved to `~/Library/Application\ Support/Postgres/var[PGVERSION]`). Instructions to do this with the `pg_upgrade` utility can be found [in the PostgreSQL manual](http://www.postgresql.org/docs/current/static/pgupgrade.html).
+
 # Command-Line Tools
 
 `psql` is the PostgreSQL command-line interface to your database. Mac OS 10.7 ships with an older version of PostgreSQL, which can be started with the following command:
@@ -178,8 +184,8 @@ In the EnterpriseDB installation directory, open `uninstall-postgresql.app`.
 
 Each release of Postgres.app comes with the latest stable release of PostgreSQL, as well a few choice extensions. Here's a rundown of what's under the hood:
 
-- [PostgreSQL 9.1.3](http://www.postgresql.org/)
-- [PostGIS 2.0.0](http://postgis.refractions.net/)
+- [PostgreSQL 9.2.2](http://www.postgresql.org/)
+- [PostGIS 2.0.2](http://postgis.refractions.net/)
 - [plv8](http://code.google.com/p/plv8js/wiki/PLV8)
 
 # Installation Directories
