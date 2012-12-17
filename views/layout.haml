@@ -2,7 +2,7 @@
 %html{lang: "en"}
   %head
     %meta{charset: "utf-8"}
-    %title Postgres.app | the easiest way to run PostgreSQL on the Mac
+    %title= ["Postgres.app", @title || "the easiest way to run PostgreSQL on the Mac"].join(" | ")
     %meta{name: "author", content: "Mattt Thompson"}
     %meta{name: "description", content: "Postgres.app is the easiest way to get started with PostgreSQL on the Mac. Open the app, and you have a PostgreSQL server ready and awaiting new connections. Close the app, and the server shuts down."}
     %link{rel: "license", href: "http://www.opensource.org/licenses/postgresql", title: "PostgreSQL License"}
