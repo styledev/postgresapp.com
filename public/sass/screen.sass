@@ -1,65 +1,127 @@
 @import "compass"
-@import "blueprint"
-
-@import "./functions"
-@import "./button"
-@import "./ribbon"
 
 +global-reset
-+blueprint
+
+@import "bootstrap"
+
+
+@import "./button"
+
+@mixin helvetica-font-stack
+  font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif
+
+@mixin meslo-font-stack
+  font-family: "Meslo", Menlo, Monaco, monospace
 
 html body
-  background: #f3f3f3 image-url("bg.jpg") top center
-  color: #444
-  font-family: "helvetica neue", helvetica, arial, sans-serif
-  padding: 2em 0
+  +helvetica-font-stack
+  -webkit-text-stroke: 1px transparent
+  -webkit-background-clip: padding-box
 
-div[role='container']
-  +container
-  width: +span(16)
+  & > header
+    @extend .navbar 
+    @extend .navbar-static-top
 
-.illustration
-  background: image-url("netsuke.png") center center no-repeat
-  width: 308px
-  height: 305px
-  margin: 0 auto 25px auto
+    nav
+      @extend .navbar-inner
 
-hgroup
-  text-align: center
-  margin-bottom: 40px
+      #logo
+        @extend .brand
 
-  h1, h2
-    +text-shadow(#fff 0x 1px 1px)
+      ul
+        @extend .nav
 
-  h1
-    font-size: 6em
-    font-weight: bold
-    color: #323232
-    margin-bottom: 0.125em
+    .hero-unit
+      +border-radius(0)
+      +clearfix
+      +box-shadow(0 -3px 20px #111 inset)
+      +text-shadow(0px 1px 1px #222)
 
-  h2
-    color: #777
+      background: #222
+      background-image: image-url("netsuke.png"), image-url("bg.png")
+      background-position: 110% center, left top
+      background-repeat: no-repeat, repeat
+      border-bottom: 1px #ddd solid
+      
+      hgroup
+        color: #fff
 
-header
-  font-size: 150%
-  border-bottom: 2px #ccc solid
-  margin-bottom: 2em
-  text-align: center
+        h1
+          font-size: 6em
+
+        h2
+          color: #ddd
+          font-size: 2em
+          font-weight: 100
+          letter-spacing: 2pt
+
+      .errata
+        float: left
+        color: #fff
+        margin-top: 40px
+        margin-left: 20px
+
+        span
+          display: block
+
+          &.postgres-version
+
+          &.mac-os-x-version
+            font-weight: 100
+
+
+[role="container"]
+  @extend .container
+  +clearfix
+
+
+body > [role="container"]
+  padding: 2em 0 4em 0
+  
+  aside
+    float: left
+    @extend .span4
+
+  aside + article
+    float: right
+    @extend .span8
+
+  .toc
+    ul
+      @extend .nav
+      @extend .nav-list
+      @extend .nav-stacked
+      @extend .affix-top
+
+    ul ul
+      display: none
 
 article
-  width: +span(16)
-  margin: 0 auto
+  h1
+    margin-top: 0.5em
+    padding-top: 0.5em
+  h2
+    font-size: 1.75em
+    border-bottom: 1px #ccc solid
+    margin: 0.5em 0
 
-footer
-  color: #8F8F8F
-  padding-top: 0em
-  text-align: center
+  h3
+    font-size: 1.25em
 
   p
-    font-size: 0.875em
+    padding: 0.5em 0
 
-  a
-    color: #777 !important
+  pre
+    margin-bottom: 1.5em
 
-    &:hover
-      color: #555 !important
+section#installation
+  .step-1, .step-2, .step-3
+    @extend .span4
+    float: left
+
+footer
+  +clearfix
+  text-align: center
+  margin-top: 2em
+  margin-bottom: 2em
+

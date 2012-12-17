@@ -2,20 +2,34 @@
 %html{lang: "en"}
   %head
     %meta{charset: "utf-8"}
-    %title= ["Postgres.app", @title].compact.join(" | ")
-    %link{rel: "stylesheet", href: "/css/documentation.css", type: 'text/css', media: "screen", charset: "utf-8"}
+    %title Postgres.app | the easiest way to run PostgreSQL on the Mac
+    %meta{name: "author", content: "Mattt Thompson"}
+    %meta{name: "description", content: "Postgres.app is the easiest way to get started with PostgreSQL on the Mac. Open the app, and you have a PostgreSQL server ready and awaiting new connections. Close the app, and the server shuts down."}
+    %link{rel: "license", href: "http://www.opensource.org/licenses/postgresql", title: "PostgreSQL License"}
+    %link{rel: "stylesheet", href: "/css/screen.css", type: 'text/css', media: "screen", charset: "utf-8"}
+    
+    %meta{property: "og:title", content: "Postgres.app"}
+    %meta{property: "og:url", content: "http://postgresapp.com"}
+    %meta{property: "og:image",  content: "http://postgresapp.com/images/netsuke.png"}
+    %meta{property: "og:site_name", content: "Postgres.app"}
+    %meta{property: "og:description", content: "The easiest way to run PostgreSQL on the Mac"}
 
-  %body
+  %body{'data-spy' => "scroll", 'data-target' => "nav"}
+    %header
+      %nav
+        %div{role: 'container'}
+          %a#logo{href: '/'} Postgres.app
+
+          %ul
+            %li 
+              %a{href: '/documentation'} Documentation
+
+      = yield_content :header
+
     %div{role: 'container'}
-      %aside
-        %header
-          %div{role: 'container'}
-            %h1#logo
-              %a{href: "/"} Postgres.app
-        %nav.toc
-          = @toc
+      = yield
 
-      %article
-        = yield
-
-      %footer
+    %footer
+      %div{role: 'container'}
+        :markdown
+          Created by [Mattt Thompson](http://mattt.me/) & supported by [Heroku Postgres](http://postgres.heroku.com)

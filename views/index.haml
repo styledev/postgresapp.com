@@ -1,47 +1,44 @@
-!!! 5
-%html{lang: "en"}
-  %head
-    %meta{charset: "utf-8"}
-    %title Postgres.app | the easiest way to run PostgreSQL on the Mac
-    %meta{:name => "author", :content => "Mattt Thompson"}
-    %meta{:name => "description", :content => "Postgres.app is the easiest way to get started with PostgreSQL on the Mac. Open the app, and you have a PostgreSQL server ready and awaiting new connections. Close the app, and the server shuts down."}
-    %link{:rel => "license", :href => "http://www.opensource.org/licenses/postgresql", :title => "PostgreSQL License"}
-    %link{rel: "stylesheet", href: "/css/screen.css", type: 'text/css', media: "screen", charset: "utf-8"}
-    
-    %meta{property: "og:title", content: "Postgres.app"}
-    %meta{property: "og:url", content: "http://postgresapp.com"}
-    %meta{property: "og:image",  content: "http://postgresapp.com/images/netsuke.png"}
-    %meta{property: "og:site_name", content: "Postgres.app"}
-    %meta{property: "og:description", content: "The easiest way to run PostgreSQL on the Mac"}
+- content_for :header do
+  .hero-unit
+    %hgroup
+      %h1 Postgres.app
+      %h2 the easiest way to run PostgreSQL on the Mac
 
-  %body
-    %div{role: 'container'}
-      %article
-        %figure.illustration.netsuke
+    %button.download{:onclick => "window.location.href='/download'"}
+      %mark.symbol ⬇
+      %span Download the Latest Version
+      %small Requires Mac OS X 10.7 or higher
 
-        %hgroup
-          %h1 Postgres.app
-          %h2 the easiest way to run PostgreSQL on the Mac
+    .errata
+      %span.postgres-version Postgres 9.2.2
+      %span.mac-os-x-version Requires Mac OS X 10.7 or above
 
-        %button.download{:onclick => "window.location.href='/download'"}
-          %mark.symbol ⬇
-          %span Download the Latest Version
 
-        %footer
-          %p
-            Created by
-            %a{href: "http://mattt.me/"} Mattt Thompson
-            &amp; supported by
-            %a{href: "http://postgres.heroku.com/"} Heroku Postgres
+%section#installation
+  .step-1
+    :markdown
+      # Install the App
 
-          .share
-            :plain
-              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://postgresapp.com" data-via="PostgresApp">Tweet</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      [Download the latest version](/download), unarchive the resulting zip file, & drag-and-drop **Postgres.app** to your **Applications** folder. 
 
-            :plain
-              <a href="https://twitter.com/PostgresApp" class="twitter-follow-button" data-show-count="false">Follow @PostgresApp</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  .step-2
+    :markdown
+      # Double Click
 
-    %a#github.ribbon{href: "https://github.com/mattt/PostgresApp"}
-      %img{src: "/images/ribbon.png", alt: "Fork me on GitHub"}
+      Simply **double-click** to launch the app. **Postgres.app runs in the menubar** (look for the tiny elephant at the top of your screen).
+
+  .step-3
+    :markdown
+      # Enjoy!
+
+      And that's it! You're now running [PostgreSQL](http://www.postgresql.org), _the world's most advanced open source database_. 
+
+- if false
+  .share
+    :plain
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://postgresapp.com" data-via="PostgresApp">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    :plain
+      <a href="https://twitter.com/PostgresApp" class="twitter-follow-button" data-show-count="false">Follow @PostgresApp</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
