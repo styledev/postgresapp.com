@@ -6529,8 +6529,9 @@ html body {
   font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
   -webkit-text-stroke: 1px transparent;
   -webkit-background-clip: padding-box;
+  min-width: 800px;
 }
-/* line 34, ../sass/screen.sass */
+/* line 36, ../sass/screen.sass */
 html body > header .hero-unit {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -6541,7 +6542,7 @@ html body > header .hero-unit {
   box-shadow: 0 -3px 20px #111111 inset;
   text-shadow: 0px 1px 1px #222222;
   background: #222222;
-  background-image: url('/images/netsuke.png?1354926173'), url('/images/bg.png?1352308674');
+  background-image: url('/images/netsuke.png?1355775125'), url('/images/bg.png?1355775125');
   background-position: 110% center, left top;
   background-repeat: no-repeat, repeat;
   border-bottom: 1px #dddddd solid;
@@ -6556,38 +6557,38 @@ html body > header .hero-unit:before, html body > header .hero-unit:after {
 html body > header .hero-unit:after {
   clear: both;
 }
-/* line 46, ../sass/screen.sass */
+/* line 48, ../sass/screen.sass */
 html body > header .hero-unit hgroup {
   color: white;
 }
-/* line 49, ../sass/screen.sass */
+/* line 51, ../sass/screen.sass */
 html body > header .hero-unit hgroup h1 {
   font-size: 6em;
 }
-/* line 52, ../sass/screen.sass */
+/* line 54, ../sass/screen.sass */
 html body > header .hero-unit hgroup h2 {
   color: #dddddd;
   font-size: 2em;
   font-weight: 100;
   letter-spacing: 2pt;
 }
-/* line 58, ../sass/screen.sass */
+/* line 60, ../sass/screen.sass */
 html body > header .hero-unit .errata {
   float: left;
   color: white;
   margin-top: 40px;
   margin-left: 20px;
 }
-/* line 64, ../sass/screen.sass */
+/* line 66, ../sass/screen.sass */
 html body > header .hero-unit .errata span {
   display: block;
 }
-/* line 69, ../sass/screen.sass */
+/* line 71, ../sass/screen.sass */
 html body > header .hero-unit .errata span.mac-os-x-version {
   font-weight: 100;
 }
 
-/* line 73, ../sass/screen.sass */
+/* line 75, ../sass/screen.sass */
 [role="container"] {
   *zoom: 1;
 }
@@ -6602,53 +6603,53 @@ html body > header .hero-unit .errata span.mac-os-x-version {
   clear: both;
 }
 
-/* line 78, ../sass/screen.sass */
+/* line 80, ../sass/screen.sass */
 body > [role="container"] {
   padding: 2em 0 4em 0;
 }
-/* line 81, ../sass/screen.sass */
+/* line 83, ../sass/screen.sass */
 body > [role="container"] aside {
   float: left;
 }
-/* line 85, ../sass/screen.sass */
+/* line 87, ../sass/screen.sass */
 body > [role="container"] aside + article {
   float: right;
 }
-/* line 96, ../sass/screen.sass */
+/* line 98, ../sass/screen.sass */
 body > [role="container"] .toc ul ul {
   display: none;
 }
 
-/* line 100, ../sass/screen.sass */
+/* line 102, ../sass/screen.sass */
 article h1 {
   margin-top: 0.5em;
   padding-top: 0.5em;
 }
-/* line 103, ../sass/screen.sass */
+/* line 105, ../sass/screen.sass */
 article h2 {
   font-size: 1.75em;
   border-bottom: 1px #cccccc solid;
   margin: 0.5em 0;
 }
-/* line 108, ../sass/screen.sass */
+/* line 110, ../sass/screen.sass */
 article h3 {
   font-size: 1.25em;
 }
-/* line 111, ../sass/screen.sass */
+/* line 113, ../sass/screen.sass */
 article p {
   padding: 0.5em 0;
 }
-/* line 114, ../sass/screen.sass */
+/* line 116, ../sass/screen.sass */
 article pre {
   margin-bottom: 1.5em;
 }
 
-/* line 118, ../sass/screen.sass */
+/* line 120, ../sass/screen.sass */
 section#installation .step-1, section#installation .step-2, section#installation .step-3 {
   float: left;
 }
 
-/* line 122, ../sass/screen.sass */
+/* line 124, ../sass/screen.sass */
 footer {
   *zoom: 1;
   text-align: center;
@@ -6664,4 +6665,48 @@ footer:before, footer:after {
 /* line 22, ../../../../../../usr/local/rvm/gems/ruby-1.9.2-p290/gems/bootstrap-sass-2.1.1.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 footer:after {
   clear: both;
+}
+
+@media only screen and (max-width: 1280px) {
+  /* line 131, ../sass/screen.sass */
+  .hero-unit {
+    background-size: 400px 400px, auto !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /* line 135, ../sass/screen.sass */
+  .hero-unit {
+    background-position: 135% center, left top !important;
+  }
+}
+@media only screen and (max-width: 960px) {
+  /* line 140, ../sass/screen.sass */
+  .hero-unit {
+    background-size: 300px 300px, auto !important;
+    background-position: 125% center, left top !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  /* line 145, ../sass/screen.sass */
+  .hero-unit {
+    background-size: 240px 240px, auto !important;
+    background-position: top center, left top !important;
+    padding-top: 260px;
+  }
+  /* line 150, ../sass/screen.sass */
+  .hero-unit hgroup {
+    text-align: center !important;
+  }
+  /* line 153, ../sass/screen.sass */
+  .hero-unit hgroup h2 {
+    font-size: 1.5em !important;
+  }
+  /* line 156, ../sass/screen.sass */
+  .hero-unit .errata {
+    margin-left: 30px !important;
+  }
+  /* line 159, ../sass/screen.sass */
+  .hero-unit button {
+    margin-left: 80px !important;
+  }
 }

@@ -18,6 +18,8 @@ html body
   -webkit-text-stroke: 1px transparent
   -webkit-background-clip: padding-box
 
+  min-width: 800px
+
   & > header
     @extend .navbar 
     @extend .navbar-static-top
@@ -124,4 +126,36 @@ footer
   text-align: center
   margin-top: 2em
   margin-bottom: 2em
+
+@media only screen and (max-width: 1280px)
+  .hero-unit
+    background-size: 400px 400px, auto !important
+
+@media only screen and (max-width: 1024px)
+  .hero-unit
+    background-position: 135% center, left top !important
+
+
+@media only screen and (max-width: 960px)
+  .hero-unit
+    background-size: 300px 300px, auto !important
+    background-position: 125% center, left top !important
+
+@media only screen and (max-width: 800px)
+  .hero-unit
+    background-size: 240px 240px, auto !important
+    background-position: top center, left top !important
+    padding-top: 260px
+
+    hgroup
+      text-align: center !important
+
+      h2
+        font-size: 1.5em !important
+
+    .errata
+      margin-left: 30px !important
+
+    button
+      margin-left: 80px !important
 
