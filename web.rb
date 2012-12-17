@@ -28,7 +28,7 @@ class Web < Sinatra::Base
   end
 
   get '/download' do
-    redirect "http://postgres-app.s3.amazonaws.com/PostgresApp-9-2-2-0.zip"
+    redirect ENV['POSTGRESAPP_DOWNLOAD_URL']
   end
   
   get '/documentation' do
