@@ -9,6 +9,7 @@ gem 'albino'
 gem 'tilt', git: 'git://github.com/rtomayko/tilt.git'
 
 gem 'rack-chartbeat', require: 'rack/chartbeat'
+gem 'rack-gauges', require: 'rack/gauges'
 
 gem 'thin'
 
