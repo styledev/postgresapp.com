@@ -16,6 +16,8 @@ If you are upgrading Postgres.app to a new minor release (e.g. 9.1 to 9.2), you 
 $ psql -h localhost
 ```
 
+When Postgres.app first starts up, it creates the $USER database, which is the default database for `psql` when none is specified. The default user is $USER, with no password.
+
 PostgreSQL ships with a constellation of useful binaries, like `pg_dump` or `pg_restore`, that you will likely want to use. Go ahead and add the `/bin` directory that ships with Postgres.app to your `PATH` (preferably in `.profile`, `.bashrc`, `.zshrc`, or the like to make sure this gets set for every Terminal session):
 
 ```bash
