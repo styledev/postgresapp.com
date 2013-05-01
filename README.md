@@ -39,7 +39,7 @@ DROP DATABASE your_database_name;
 ```
 
 You can get a list of all of `psql`'s commands and shortcuts with `\?`. A complete reference for PostgreSQL is [available on the PostgreSQL.org](http://www.postgresql.org/docs/9.1/interactive/index.html).
- 
+
 # GUI Applications
 
 Explore, query, and visualize your data with [Induction](http://inductionapp.com/). Although still in early development, Induction is fast and easy to use, and is our go-to application when working with data.
@@ -53,6 +53,12 @@ Building a web application and want to skip to the part where everything works? 
 ## Ruby
 
 Install the `pg` gem with `gem install pg`, or just add `gem 'pg'` to your application's `Gemfile` and run `bundle install`
+
+> If `gem install pg` fails, try the following command:
+
+```
+env ARCHFLAGS="-arch x86_64" gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/MacOS/bin/pg_config
+``
 
 If you are running your application with [Foreman](https://github.com/ddollar/foreman), set the `DATABASE_URL` config variable in `.env`:
 
