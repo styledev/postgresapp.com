@@ -200,7 +200,7 @@ Each release of Postgres.app comes with the latest stable release of PostgreSQL,
 
 Uninstall Postgres.app just like you would any application: quit, drag to the Trash, and Empty Trash.
 
-The application container resides at `~/Library/Containers/com.heroku.Postgres`, so remove that when uninstalling, or if you need to do a hard reset on the database.
+Postgres.app data and configuration resides at `~/Library/Application\ Support/Postgres`, so remove that when uninstalling, or if you need to do a hard reset on the database.
 
 ## Troubleshooting
 
