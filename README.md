@@ -54,12 +54,6 @@ Building a web application and want to skip to the part where everything works? 
 
 Install the `pg` gem with `gem install pg`, or just add `gem 'pg'` to your application's `Gemfile` and run `bundle install`
 
-> If `gem install pg` fails, try the following command:
-
-```
-env ARCHFLAGS="-arch x86_64" gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/MacOS/bin/pg_config
-``
-
 If you are running your application with [Foreman](https://github.com/ddollar/foreman), set the `DATABASE_URL` config variable in `.env`:
 
 ```
@@ -207,6 +201,21 @@ Each release of Postgres.app comes with the latest stable release of PostgreSQL,
 Uninstall Postgres.app just like you would any application: quit, drag to the Trash, and Empty Trash.
 
 The application container resides at `~/Library/Containers/com.heroku.Postgres`, so remove that when uninstalling, or if you need to do a hard reset on the database.
+
+## Troubleshooting
+
+- If you cannot connect to Postgres.app, you may have to reset your shared memory settings:
+
+```
+sudo sysctl -w kern.sysv.shmall=65536
+sudo sysctl -w kern.sysv.shmmax=16777216
+```
+
+- If `gem install pg` fails, try the following command:
+
+```
+env ARCHFLAGS="-arch x86_64" gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/MacOS/bin/pg_config
+```
 
 # Additional Resources
 
