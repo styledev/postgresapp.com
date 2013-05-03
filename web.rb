@@ -19,18 +19,22 @@ class Web < Sinatra::Base
 
       render(:markdown, template, options.merge(renderer: Redcarpet::Render::HTML.new(with_toc_data: true)), locals)
     end
+
+    def version
+      File.basename(ENV['POSTGRESAPP_DOWNLOAD_URL'], ".zip").scan(/\d+/)[0...3].join(".")
+    end
   end
 
   get '/' do
     # cache_control :public, :must_revalidate, max_age: 3600
-    
+
     haml :index
   end
 
   get '/download' do
     redirect ENV['POSTGRESAPP_DOWNLOAD_URL']
   end
-  
+
   get '/documentation' do
     cache_control :public, :must_revalidate, max_age: 3600
 
