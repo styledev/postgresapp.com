@@ -186,7 +186,7 @@ In the EnterpriseDB installation directory, open `uninstall-postgresql.app`.
 
 Each release of Postgres.app comes with the latest stable release of PostgreSQL, as well a few choice extensions. Here's a rundown of what's under the hood:
 
-- [PostgreSQL 9.2.2](http://www.postgresql.org/)
+- [PostgreSQL 9.2.4](http://www.postgresql.org/)
 - [PostGIS 2.0.2](http://postgis.refractions.net/)
 - [plv8](http://code.google.com/p/plv8js/wiki/PLV8)
 
@@ -222,6 +222,6 @@ env ARCHFLAGS="-arch x86_64" gem install pg -- --with-pg-config=/Applications/Po
 # Additional Resources
 
 - [PostgreSQL Website](http://www.postgresql.org/) - The source for all of the latest PostgreSQL news and information.
-- [PostgreSQL Docs](http://www.postgresql.org/docs/9.1/interactive/index.html) - The canonical reference for everything you need to know about PostgreSQL.
+- [PostgreSQL Docs](http://www.postgresql.org/docs/9.2/interactive/index.html) - The canonical reference for everything you need to know about PostgreSQL.
 - [Postgres Guide](http://postgresguide.com/) - A promising new PostgreSQL resource that reads well and introduces advanced topics in a way that's easy to understand.
 - [Heroku Postgres](https://postgres.heroku.com/) - The largest and most reliable Postgres service in the world, for when it comes time to deploy and scale your database in production.
