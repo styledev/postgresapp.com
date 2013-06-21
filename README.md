@@ -46,6 +46,8 @@ You can get a list of all of `psql`'s commands and shortcuts with `\?`. A comple
 
 Explore, query, and visualize your data with [Induction](http://inductionapp.com/). Although still in early development, Induction is fast and easy to use, and is our go-to application when working with data.
 
+If you are running Mac OS X 10.8 and enjoy the cutting edge, check out [PG Commander](http://eggerapps.at/pgcommander/).
+
 If you're looking for something more fully-featured and don't mind getting the kitchen sink in the process, check out [pgAdmin](http://www.pgadmin.org/).
 
 # Configuration Settings
