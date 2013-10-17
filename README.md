@@ -198,7 +198,7 @@ Each release of Postgres.app comes with the latest stable release of PostgreSQL,
 - Headers: `/Applications/Postgres.app/Contents/MacOS/include`
 - Libraries: `/Applications/Postgres.app/Contents/MacOS/lib`
 - Shared Libraries: `/Applications/Postgres.app/Contents/MacOS/share`
-- Data: `~/Library/Application\ Support/Postgres/var`
+- Data: `~/Library/Containers/com.heroku.postgres/Data/Library/Application\ Support/Postgres`
 
 # Uninstalling
 
